@@ -1,0 +1,13 @@
+---
+- name: add a user
+  hosts: win
+  gather_facts: false
+  tasks:
+    - name: Remove a group
+      ansible.windows.win_group:
+        name: SuperAnsiGroup
+        state: absent
+
+
+
+
