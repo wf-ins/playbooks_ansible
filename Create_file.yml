@@ -1,0 +1,8 @@
+---
+    - name: Create file example
+      hosts: win
+      tasks:
+         - name: www
+           win_file:
+             path: C:\Temp1\tessst.txt
+             state: touch

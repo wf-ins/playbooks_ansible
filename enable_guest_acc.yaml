@@ -1,0 +1,21 @@
+---
+  - name: enable guest acc
+    hosts: win
+    gather_facts: false
+    tasks:
+      - name: Security policy
+        when: harden_win_gpo_action == 'security_policy'
+        block:
+          # https://docs.ansible.com/ansible/devel/modules/win_security_policy_module.html
+          - name: Enable Guest account
+            community.windows.win_security_policy:
+              section: System Access
+              key: EnableGuestAccount
+              value: 1
+
+
+
+
+
+
+

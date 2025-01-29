@@ -1,0 +1,6 @@
+---
+    - name: remove dir
+      hosts: win
+      tasks:
+        - name: dir
+

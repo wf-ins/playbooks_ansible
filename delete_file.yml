@@ -1,0 +1,8 @@
+---
+- hosts: win
+
+  tasks:
+  - name: Delete file
+    win_file:
+      path: C:\Temp\1.txt
+      state: absent
