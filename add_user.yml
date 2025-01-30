@@ -5,9 +5,9 @@
   tasks:
     - name: add user
       win_user:
-        name: ansible
-        password: "@Welcome123"
+        name: pelmen
+        password: "Welcome123"
         password_never_expires: true
         account_expires: never
-        groups: SuperAnsiGroup
+        groups: Kastryulya
         state: present
