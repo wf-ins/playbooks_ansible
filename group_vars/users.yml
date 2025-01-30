@@ -1,0 +1,11 @@
+
+
+target_host: win_sup
+
+users:
+  - name: "Antoshka"
+    password: "Welcome123"
+    groups: ["Ddd"]
+  - name: "Petrushka"
+    password: "Sss"
+    groups: ["Users"]

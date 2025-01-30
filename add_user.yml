@@ -1,13 +1,17 @@
 ---
-- name: add a user
-  hosts: win_sup
+- name: Add users to Windows
+  hosts: "{{ target_host }}"
   gather_facts: false
+
+  vars_files:
+    - group_vars/users.yml
+
   tasks:
-    - name: add user
-      win_user:
-        name: "{{item.name}}"
-        password: "{{item.password}}"
+    - name: Add user
+      ansible.windows.win_user:
+        name: "{{ item.name }}"
+        password: "{{ item.password }}"
         password_never_expires: true
-        groups: "{{item.groups}}"
+        groups: "{{ item.groups }}"
         state: present
       loop: "{{ users }}"

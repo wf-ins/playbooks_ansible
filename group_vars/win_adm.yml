@@ -2,8 +2,6 @@
 
 
 
-
-
 ansible_user: WKST
 ansible_connection: ssh
 ansible_shell_type: cmd
