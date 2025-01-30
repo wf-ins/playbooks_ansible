@@ -1,13 +1,13 @@
 ---
 - name: add a user
-  hosts: win
+  hosts: win_sup
   gather_facts: false
   tasks:
     - name: add user
       win_user:
-        name: pelmen
-        password: "Welcome123"
+        name: "{{item.name}}"
+        password: "{{item.password}}"
         password_never_expires: true
-        account_expires: never
-        groups: Kastryulya
+        groups: "{{item.groups}}"
         state: present
+      loop: "{{ users }}"

@@ -1,0 +1,12 @@
+
+
+
+
+users:
+  - name: "Antoshka"
+    password: "Welcome123"
+    groups: ["Kastryulya"]
+  - name: "Petrushka"
+    password: "Welcome123"
+    groups: ["Users"]
+

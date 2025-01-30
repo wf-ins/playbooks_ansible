@@ -1,0 +1,7 @@
+users:
+  - name: "Antoshka"
+    password: "Welcome123"
+    groups: ["Kasryulya"]
+  - name: "Antoshka1"
+    password: "Welcome123"
+    groups: ["Users"]
