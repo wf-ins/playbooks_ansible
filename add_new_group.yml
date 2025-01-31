@@ -2,12 +2,12 @@
 - name: Add groups to Windows
   hosts: both
   gather_facts: false
-  
+
   vars:
     groups_list:
       - name: "Sss"
       - name: "Ddd"
-        
+
 
   tasks:
 #    - name: Debug groups variable

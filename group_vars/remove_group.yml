@@ -1,0 +1,6 @@
+target_host: both
+
+
+groups_list:
+      - name: "Sss"
+      - name: "Ddd"

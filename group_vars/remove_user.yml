@@ -1,0 +1,10 @@
+
+
+
+target_host: both
+
+users:
+  - name: "Antoshka"
+    groups: ["Ddd"]
+  - name: "Petrushka"
+    groups: ["Users"]

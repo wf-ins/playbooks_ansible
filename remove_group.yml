@@ -1,12 +1,29 @@
 ---
-- name: add a user
-  hosts: win
+
+- name: Remove groups from Windows
+  hosts: "{{ target_host }}"
   gather_facts: false
+
+  vars_files:
+    - group_vars/remove_group.yml
+
+
   tasks:
-    - name: Remove a group
+
+    - name: Del group
       ansible.windows.win_group:
-        name: SuperAnsiGroup
+        name: "{{ group_item.name }}"
         state: absent
+      loop: "{{ groups_list }}"
+      loop_control:
+        loop_var: group_item
+
+
+
+
+
+
+
 
 
 

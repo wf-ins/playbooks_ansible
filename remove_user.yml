@@ -1,12 +1,27 @@
 ---
-- name: add a user
-  hosts: win
+- name: Remove user
+  hosts: "{{ target_host }}"
   gather_facts: false
+
+  vars_files:
+    - group_vars/remove_user.yml
+
   tasks:
-    - name: add user
-      win_user:
-        name: ansible
-        password: "@Welcome123"
-        password_never_expires: true
-        account_expires: never
+    - name: Del user
+      ansible.windows.win_user:
+        name: "{{ item.name }}"
+        groups: "{{ item.groups }}"
         state: absent
+      loop: "{{ users }}"
+
+
+
+
+
+
+
+
+
+
+
+
